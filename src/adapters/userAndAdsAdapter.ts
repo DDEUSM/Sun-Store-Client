@@ -64,6 +64,7 @@ async function likeAds({ userId, adId } : LikeAdsType)
         }                        
     }
     console.log(anyError.data);
+    
 };
 
 async function visualizeAds({ userId, adId } : LikeAdsType)

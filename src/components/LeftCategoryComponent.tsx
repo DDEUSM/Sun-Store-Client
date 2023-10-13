@@ -5,6 +5,7 @@ import { useDispatch } from "react-redux";
 import { setSearchInfos } from "../redux/reducers/searchReducer";
 import { Link, useNavigate, useParams } from "react-router-dom";
 import ux_icons from "../assets/ui/ux-icons";
+import { CategoryType } from "../types/category_types";
 
 type Props = {
     windowStatus: boolean;
@@ -20,7 +21,7 @@ function CategorySearch({ windowStatus, type }: Props)
     
     const dispatch = useDispatch();
     const navigate = useNavigate();
-    const cat_array = [all_categories.find(cat => cat.name === category)];
+    const categories = [all_categories.find(cat => cat.name === category)];
 
     function handleClick( id : number)
     {
@@ -32,7 +33,7 @@ function CategorySearch({ windowStatus, type }: Props)
     }
 
     useEffect(() => {
-        console.log("cat_array: " + cat_array);
+        console.log("cat_array: " + categories);
     }, []);
     
     return (
@@ -52,8 +53,8 @@ function CategorySearch({ windowStatus, type }: Props)
                 </Link>
             }
             <div className=" w-full p-1 ">                
-                {cat_array[0] !== undefined?
-                    (<NestedCategory data={cat_array} url={`/${type}/${state}`}  lv={0}/>)
+                {categories[0] !== undefined?
+                    (<NestedCategory data={categories as CategoryType[]} url={`/${type}/${state}`}  lv={0}/>)
                     :
                     (
                         <ul className="p-1 bg-[#F9F9F9] bg w-40 mr-[-20px] divide-y divide-gray border border-gray rounded-md">

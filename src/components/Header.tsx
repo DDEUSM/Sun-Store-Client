@@ -108,8 +108,9 @@ export default function Header({swapTheme}: Props)
                             )}
                         </Link>
 
-                        <Link to="/" className='hover:text-orange'>
+                        <Link to="/" className='group hover:text-orange overflow-hidden'>
                             Início
+                            <div className='w-full h-[2px] ml-[-100%] bg-orange rounded group-hover:ml-[0] duration-200 ease-in'></div>
                         </Link>
 
                         <div className='relative flex-col group justify-center'>

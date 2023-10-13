@@ -2,7 +2,6 @@ import { Link } from "react-router-dom";
 import { AdsType } from "../types/ads_types";
 
 import useRootStateSelector from "../redux/hookRootState/RootStateSelector";
-import { setUrlJson } from "../redux/reducers/navHistoryReducer";
 import { useDispatch } from "react-redux";
 
 type props = {
@@ -16,12 +15,7 @@ function AdsCard( { ads } : props ){
 
     return (
         <Link to={`/ads/${ads._id}`} className="flex flex-none flex-col justify-center items-start h-[258px] w-[170px] overflow-hidden cursor-pointer shadow-lg rounded-md border border-gray hover:scale-105 hover:shadow-2xl ease-in duration-100 dark:border-darkGray " 
-        key={ads._id}
-        onClick={() => dispatch(setUrlJson([...nav_history.url_history, {
-            id : 2,
-            url : "/",
-            name : "product-x"
-        }]))}
+        key={ads._id}        
         >
                             
             <img className='w-[170px] min-h-[170px] object-cover border-b border-gray rounded-md ease-in duration-100   

@@ -7,7 +7,6 @@ import { useEffect, useRef, useState } from "react";
 import { AdsStateType, AdsType } from "../../types/ads_types";
 import ads_icons from "../../assets/ui/ads-icons";
 import ux_icons from "../../assets/ui/ux-icons";
-import NavigationHistory from "../../components/NavigationHistory";
 import userAndAdsAdapter, { LikeAdsType } from "../../adapters/userAndAdsAdapter";
 import userAdapter from "../../adapters/userAdapter";
 import Slider from "../../components/Slide";

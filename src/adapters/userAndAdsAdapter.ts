@@ -6,7 +6,9 @@ export type LikeAdsType = {
     adId : string
 }
 
-async function likeAds({ userId, adId } : LikeAdsType)
+type LikeAdsFunction = (obj : LikeAdsType) => any;
+
+const likeAds: LikeAdsFunction = async function({ userId, adId } : LikeAdsType)
 {
     console.log('Dando Like.... ')
     console.log(userId, adId);
@@ -64,7 +66,7 @@ async function likeAds({ userId, adId } : LikeAdsType)
         }                        
     }
     console.log(anyError.data);
-    
+    return;
 };
 
 async function visualizeAds({ userId, adId } : LikeAdsType)

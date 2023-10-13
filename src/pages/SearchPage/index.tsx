@@ -7,7 +7,6 @@ import { setCategories } from "../../redux/reducers/categoryReducer";
 import categoryAdapter from "../../adapters/categoryAdapter";
 import { CategoryType } from "../../types/category_types";
 import FormSearch from "../../components/FormSearch";
-import NavigationHistory from "../../components/NavigationHistory";
 
 
 export default function SearchPage()

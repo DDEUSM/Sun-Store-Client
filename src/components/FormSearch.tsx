@@ -13,7 +13,7 @@ import UxIcons from '../assets/ui/ux-icons';
 type FormData = SearchReducertype;
 
 type Props = {
-    searchType: "Search" | "my-ads"
+    searchType: "Search" | "my-ads" | "my-favorite-ads"
 }
 
 export default function FormSearchResult({ searchType }: Props)

@@ -51,7 +51,7 @@ function MyAdSearchResult()
 
     const { state, category, sub_category } = useParams();
     const [search_params, setSearchParams] = useSearchParams();
-    const { title, order } = Object.fromEntries([...search_params]);     
+    const { title, order } = Object.fromEntries([...search_params]); 
 
     const [pagination, setPaginationInfos] = useState<PaginationType>({
         tot_pages : 0,
@@ -78,7 +78,7 @@ function MyAdSearchResult()
             }
         }
     },[ads_root_state, filter, order]);
-
+   
     useEffect(() => {
         const urlParams: UrlParamsType = {
             state, 

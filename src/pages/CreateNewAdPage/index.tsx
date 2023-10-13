@@ -1,6 +1,6 @@
 import { useState } from "react";
 import Menu from "../../components/Menu";
-import MyAccountNav from "../../components/MyAccountNav";
+
 import ShortcutBar from "../../components/ShortcutBar";
 import AddressGroup from "./components/AddressGroup";
 import CategoryGroup from "./components/CategoryGroup";
@@ -17,18 +17,16 @@ export default function(){
         openMenu(!windowStatus)
     }
     return(
-        <div className="flex justify-center w-full mb-10 gap-2">
-
-            
-            <MyAccountNav windowStatus={windowStatus} />   
+        <div className="flex justify-center w-full mb-10 gap-2 lg:mt-5">
+                        
             <ShortcutBar.ShadowBackground 
                 windowStatus={windowStatus}
                 closeWindow={openWindowMenu}                
             />   
 
-            <div className="flex flex-col gap-3 w-full lg:grid lg:grid-cols-2 mt-5">
+            <div className="flex flex-col gap-3 w-full lg:grid lg:grid-cols-2">
                 
-                <TextGroup.Container className="flex flex-col w-full border-2 border-darkGray rounded-lg p-2 lg:col-span-2">
+                <TextGroup.Container className="flex flex-col w-full border-2 border-darkGray rounded-lg p-2 mt-1 lg:col-span-2">
                     <TextGroup.InputTitle />
                     <TextGroup.InputDescription />
                 </TextGroup.Container>  

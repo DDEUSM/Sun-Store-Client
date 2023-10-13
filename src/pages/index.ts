@@ -8,6 +8,7 @@ import SearchPage from "./SearchPage";
 import MyAccountPage from "./MyAccountPage";
 import MyAdsPage from "./MyAdsPage";
 import MyAdSearchResult from "./MyAdsPage/OutletSearchResults";
+import MyFavoriteAdsPage from "./MyFavoriteAdsPage";
 import CreateNewAdPage from "./CreateNewAdPage";
 
 export default { 
@@ -21,5 +22,6 @@ export default {
     MyAccountPage,
     MyAdsPage, 
     MyAdSearchResult,
+    MyFavoriteAdsPage,
     CreateNewAdPage,
 };

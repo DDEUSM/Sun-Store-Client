@@ -1,5 +1,4 @@
 import { Link } from "react-router-dom";
-import MyAccountNav from "../../components/MyAccountNav";
 import ShortcutBar from "../../components/ShortcutBar";
 import { useState } from "react";
 
@@ -13,8 +12,9 @@ export default function()
 
     return(
         <>
+        
         <div className="flex justify-center w-full gap-2">
-            <MyAccountNav windowStatus={windowStatus} />                                          
+                                                      
             <div className="flex flex-col w-full h-[340px] shadow-lg rounded-md border border-transparent dark:border-darkGray">
                  
                 <section className="flex items-center gap-2 w-full h-[270px] px-4 bg-yellow rounded-t-md dark:bg-orange">

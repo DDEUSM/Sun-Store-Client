@@ -46,7 +46,7 @@ async function getSingleAds( id : string ){
     return result_req.data;
 };
 
-const getAds: GetSearchType =  async function( params, query )
+const getAds: GetSearchType = async function( params, query )
 {
     console.log(params, query);
     const result_req = await axios.get(`${URL_BASE}/search/${params.state}/${params.category?(params.category):('empty')}/${params.sub_category?(params.sub_category):('empty')}?page=${query.actual_page}&userId=${query.userId?(query.userId):('empty')}&title=${query.title?(query.title):('empty')}&order=${query.sort?(query.sort):('empty')}&min_price=${query.min_price?(query.min_price):('empty')}&max_price=${query.max_price?(query.max_price) : 'empty'}`);
@@ -55,7 +55,7 @@ const getAds: GetSearchType =  async function( params, query )
 
 const getAdCountAndPg: GetPgandAdscountType = async function( params, query )
 {
-    const result_req = await axios.get(`${URL_BASE}/search/${params.state}/${params.category?(params.category):('empty')}/${params.sub_category?(params.sub_category):('empty')}?page=${query.actual_page}&userId=${query.userId?(query.userId):('empty')}&title=${query.title?(query.title):('empty')}&order=${query.sort?(query.sort):('empty')}&min_price=${query.min_price?(query.min_price):('empty')}&max_price=${query.max_price?(query.max_price) : 'empty'}`);
+    const result_req = await axios.get(`${URL_BASE}/count/${params.state}/${params.category?(params.category):('empty')}/${params.sub_category?(params.sub_category):('empty')}?userId=${query.userId?(query.userId):('empty')}&title=${query.title?(query.title):('empty')}&min_price=${query.min_price?(query.min_price):('empty')}&max_price=${query.max_price?(query.max_price) : 'empty'}`);
 
     return result_req.data;
 }
@@ -117,7 +117,7 @@ const getUserAds: GetSearchType = async function( params, query )
 
 const getPageAndUserAdCount: GetPgandAdscountType = async function( params, query )
 {
-    const result_req = await axios.get(`${URL_BASE}/search/${params.state}/${params.category?(params.category):('empty')}/${params.sub_category?(params.sub_category):('empty')}?page=${query.actual_page}&userId=${query.userId?(query.userId):('empty')}&title=${query.title?(query.title):('empty')}&order=${query.sort?(query.sort):('empty')}&min_price=${query.min_price?(query.min_price):('empty')}&max_price=${query.max_price?(query.max_price) : 'empty'}`);
+    const result_req = await axios.get(`${URL_BASE}/count/${params.state}/${params.category?(params.category):('empty')}/${params.sub_category?(params.sub_category):('empty')}?page=${query.actual_page}&userId=${query.userId?(query.userId):('empty')}&title=${query.title?(query.title):('empty')}&order=${query.sort?(query.sort):('empty')}&min_price=${query.min_price?(query.min_price):('empty')}&max_price=${query.max_price?(query.max_price) : 'empty'}`);
 
     return result_req.data;
 }

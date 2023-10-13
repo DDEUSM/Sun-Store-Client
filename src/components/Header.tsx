@@ -108,24 +108,35 @@ export default function Header({swapTheme}: Props)
                             )}
                         </Link>
 
+                        <Link to="/" className='hover:text-orange'>
+                            Início
+                        </Link>
+
                         <div className='relative flex-col group justify-center'>
                             <div className='hidden md:flex'>
-                                <Link to="/my-account"
+                                <p
                                     className='cursor-pointer duration-100 ease-in-out group-hover:text-orange'
                                 >
                                     Minha conta
-                                </Link>
+                                </p>
                                 <ux_icons.ArrowDownIcon  width={32} height={32} 
-                                    className='arrow-down stroke-black rounded dark:stroke-white duration-100 ease-in-out group-hover:bg-orange group-hover:stroke-white' 
-                                    onClick={() => {openList('myAccount')}}                                    
+                                    className='arrow-down stroke-black rounded dark:stroke-white duration-100 ease-in-out group-hover:fill-orange group-hover:stroke-orange group-hover:stroke-white' 
+                                    onClick={() => {openList('myAccount')}}
+                                                                     
                                 />
                             </div>                            
-                            <div className={`${listMyAccount?'flex items-center justify-center': 'md:hidden'} top-full h-[75px] shadow-md w-[100px] py-1 text-blueBg bg-white border border-gray rounded-md dark:bg-gray md:absolute`}>
-                                <ul className='text-center w-full p-1 divide-y divide-gray'>
-                                    <Link to="/my-ads/Todos" className='rounded cursor-pointer hover:text-orange'>
-                                        Meus Posts
+                            <div className={`${listMyAccount?'flex items-center justify-center': 'md:hidden'} top-full h-[110px] shadow-md w-[132px] py-1 text-blueBg bg-white border border-gray rounded-md dark:bg-gray md:absolute`}>
+                                <ul className='flex flex-col text-right w-full p-1 divide-y divide-gray'>
+                                    <Link to="/my-account" className='w-full rounded cursor-pointer hover:text-orange'>
+                                        Meus Dados
                                     </Link>
-                                    <li className='w-full rounded cursor-pointer hover:text-orange'>
+                                    <Link to="/my-ads/Todos" className='rounded cursor-pointer hover:text-orange'>
+                                        Meus Anúncios
+                                    </Link>
+                                    <Link to="/my-favorite-ads/Todos" className='rounded cursor-pointer hover:text-orange'>
+                                        Meus Favoritos
+                                    </Link>
+                                    <li className='text-center w-full rounded cursor-pointer text-orange'>
                                         <button onClick={() => {
                                             logout()
                                             navigate("/login")

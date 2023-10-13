@@ -7,7 +7,14 @@ export default function AllRoutes(){
           <Route path='/' element={<Page.Home/>} />
           
           <Route path='/create-new-ad' element={<Page.CreateNewAdPage />} />
-          <Route path='/my-favorites' element={<>Minha conta</>} />
+          <Route path='/my-favorite-ads' element={<Page.MyFavoriteAdsPage />} children={
+            <Route path=':state' element={<Page.MyAdSearchResult />} children={
+              <Route path=':category' element={<Page.MyAdSearchResult />} children={
+                <Route path=':sub_category' element={<Page.MyAdSearchResult/>}
+                />
+              }/>
+            }/>  
+          }/>
           <Route path='/my-ads' element={<Page.MyAdsPage />} children={
             <Route path=':state' element={<Page.MyAdSearchResult />} children={
               <Route path=':category' element={<Page.MyAdSearchResult />} children={

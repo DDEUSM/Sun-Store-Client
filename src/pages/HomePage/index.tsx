@@ -18,7 +18,9 @@ import AdsCard from '../../components/AdsCard';
 import { AdsStateType } from '../../types/ads_types';
 
 import { Swiper, SwiperSlide } from 'swiper/react';
-import { Pagination } from 'swiper/modules'
+import { Pagination, Navigation } from "swiper";
+
+import "swiper/css/navigation";
 
 function utilsFunctions()
 {
@@ -125,12 +127,12 @@ export default function Home()
                     <Swiper 
                             slidesPerView={4}  
                             spaceBetween={0}                                        
-                            navigation
+                            navigation={true}
                             className='h-[300px] w-full'
                             pagination = {{
                                 clickable: true
                             }}
-                            modules={[Pagination]}
+                            modules={[Pagination, Navigation]}
                             breakpoints={{
                                 100 : {
                                     slidesPerView: 2,

@@ -10,7 +10,6 @@ type props = {
 
 function AdsCard( { ads } : props ){
 
-    const nav_history = useRootStateSelector((state) => state.nav_history);
     const dispatch = useDispatch();
 
     return (

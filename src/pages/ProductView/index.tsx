@@ -1,4 +1,5 @@
 import { Swiper, SwiperSlide } from "swiper/react";
+import { Pagination, Navigation } from "swiper";
 
 import { useParams } from "react-router-dom";
 import FormSearchResult from "../../components/FormSearch";
@@ -9,7 +10,6 @@ import ads_icons from "../../assets/ui/ads-icons";
 import ux_icons from "../../assets/ui/ux-icons";
 import userAndAdsAdapter, { LikeAdsType } from "../../adapters/userAndAdsAdapter";
 import userAdapter from "../../adapters/userAdapter";
-import Slider from "../../components/Slide";
 
 
 function ImagesSlider({ads, photoIndex}: any)
@@ -124,7 +124,8 @@ function ProductView()
                         <Swiper
                             slidesPerView={1}
                             pagination={{ clickable: true }}
-                            navigation
+                            navigation={true}
+                            modules={[Pagination, Navigation]}
                             className="w-full h-[460px]"
                         >
                             {ads.url_image.map((imgUrl, index) => {

@@ -43,7 +43,7 @@ function utilsFunctions()
                         }}
                     >
                         <img className="group-hover:scale-105 ease-in-out duration-100" 
-                            src={`http://localhost:2300/${category.category_icon_url}`} 
+                            src={`https://sun-store-api.cyclic.cloud/${category.category_icon_url}`} 
                             alt="svg" 
                         />                                                        
                     </div>

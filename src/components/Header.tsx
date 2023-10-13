@@ -157,7 +157,7 @@ export default function Header({swapTheme}: Props)
                     </>
                 ):(
                     <>
-                        <Link to='/login' className='group ease-in-out duration-100  mt-3 hover:text-orange overflow-hidden'>
+                        <Link to='/login' className='group ease-in-out duration-100 mt-3 hover:text-orange overflow-hidden md:mt-0'>
                             Entrar
                             <div className='w-full h-[2px] ml-[-100%] bg-orange rounded group-hover:ml-[0] ease-in duration-200'></div>
                         </Link>

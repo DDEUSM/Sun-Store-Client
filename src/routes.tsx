@@ -26,7 +26,8 @@ export default function AllRoutes(){
           <Route path='/my-account' element={<Page.MyAccountPage />} />
 
           <Route path='/loggout' element={<>Saindo...</>}/>
-          <Route path='/register' element={<Page.RegisterNewUser/>}/>
+          <Route path='/register' element={<Page.RegisterNewUser />} />
+          <Route path='/register/upload-image/:id' element={<Page.UploadPerfilImage />} />
           <Route path='/login' element={<Page.Login/>}/>
           <Route path='/help' element={<>Ajuda...</>}/>                  
           <Route path='/ads/:id' element={<Page.ProductView/>}/>

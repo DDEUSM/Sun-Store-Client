@@ -86,7 +86,7 @@ export default function Login(){
                     </button>
                 </div>
                 <div className="flex w-full justify-start items-center gap-2">
-                    <input type="checkbox" name="Lembrar" id="" />
+                    <input type="checkbox" name="Lembrar" />
                     <label className="text-darkGray dark:text-white" htmlFor="">Lembrar Senha</label>                    
                 </div>            
                     <input 

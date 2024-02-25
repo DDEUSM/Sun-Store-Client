@@ -4,12 +4,14 @@ import { RegisterInputs } from "../pages/RegisterPage";
 import { LoginForm } from "../pages/LoginPage";
 import { ErrorInfo } from "react";
 
-async function register(data : RegisterInputs){
+async function register(data : RegisterInputs)
+{
     const result_req = await axios.post(`${URL_BASE}/user/register`, data, {
         headers : {
             'Content-Type' : 'application/x-www-form-urlencoded'
         }
-    });    
+    }); 
+    return result_req.data;   
 }
 
 async function login(data : LoginForm){    

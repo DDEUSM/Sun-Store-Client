@@ -96,21 +96,28 @@ function ProductView()
     }
 
     async function favoriteAd()
-    {        
-        if(verifyIfUserIsLogged())
-        {        
+    {                
+        if(verifyIfUserIsLogged() && !inRequestRef.current)
+        {   
+            inRequestRef.current = true;
             const adId = ads?._id as string;
             const userId = localStorage.getItem("id") as string;
             await userAndAdsAdapter.likeAds({ userId, adId });
             await loadAds();
             await checkThisUserFavoriteAds()
+            inRequestRef.current = false;
         }
     }
 
     useEffect(() => {
-        loadAds();
-        checkThisUserFavoriteAds();           
-        visualizeAd();
+        if(!inRequestRef.current)
+        {
+            inRequestRef.current = true;
+            loadAds();
+            checkThisUserFavoriteAds();           
+            visualizeAd();
+            inRequestRef.current = false;
+        }        
     }, []);   
 
     return(

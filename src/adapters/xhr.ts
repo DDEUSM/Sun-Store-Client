@@ -1,4 +1,4 @@
 
-const URL_BASE = "https://sun-store-api.cyclic.cloud/";
+const URL_BASE = "http://localhost:2300";
 
 export default URL_BASE;

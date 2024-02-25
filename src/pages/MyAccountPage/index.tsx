@@ -1,6 +1,7 @@
 import { Link } from "react-router-dom";
 import ShortcutBar from "../../components/ShortcutBar";
 import { useState } from "react";
+import ReactiveButton from "../../components/reusable/ReactiveButton";
 
 export default function()
 {
@@ -15,7 +16,7 @@ export default function()
         
         <div className="flex justify-center w-full gap-2">
                                                       
-            <div className="flex flex-col w-full h-[340px] shadow-lg rounded-md border border-transparent dark:border-darkGray">
+            <div className="flex flex-col w-full shadow-lg rounded-md border border-transparent dark:border-darkGray">
                  
                 <section className="flex items-center gap-2 w-full h-[270px] px-4 bg-yellow rounded-t-md dark:bg-orange">
                     <div className="flex-none w-[125px] h-[125px] rounded-full border border-white">
@@ -51,6 +52,13 @@ export default function()
                                 { localStorage.getItem("email") }
                             </p> 
                         </div>                   
+                    </div>
+                    <div className="flex items-center justify-center px-4 h-20 border-t border-black bg-white">
+                        <ReactiveButton 
+                            text="Deletar conta"
+                            textcolor="red"
+                            backgrounColor="white"                            
+                        />
                     </div>
                 </section>
             </div>

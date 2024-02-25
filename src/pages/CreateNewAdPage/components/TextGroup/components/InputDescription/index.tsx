@@ -6,8 +6,9 @@ export default function()
                 Descrição:
             </label>
             <textarea              
-            value="Hello World sdsdsdsdsd sdsdsd dsdsdsds dsdsdsds dsdsdsd df ddfdfdf dsdsdsd dsds dfdfdf fg gfg fg fg" 
-            className="flex justify-start items-start p-1 w-full h-[234px] rounded-md bg-[#EBEBEB] leading-4"
+                value="" 
+                className="flex justify-start items-start p-1 w-full h-[234px] rounded-md bg-[#EBEBEB] leading-4"
+                placeholder="Digite a Descrição aqui"
             />
         </div>
     )

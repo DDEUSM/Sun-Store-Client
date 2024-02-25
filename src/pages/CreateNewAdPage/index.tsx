@@ -4,7 +4,7 @@ import Menu from "../../components/Menu";
 import ShortcutBar from "../../components/ShortcutBar";
 import AddressGroup from "./components/AddressGroup";
 import CategoryGroup from "./components/CategoryGroup";
-import DragAndDropImage from "./components/DragAndDropImage";
+import DragAndDropImage from "../../components/reusable/DragAndDropImage";
 import OfferGroup from "./components/OfferGroup";
 import PreviewButton from "./components/PreviewButton";
 import PublishButton from "./components/PublishButton";

@@ -58,7 +58,9 @@ function App()
               <sun_store_icons.SunStoreIcon className='w-[full] h-[40px] flex justify-center items-center col-span-1 row-span-full'/>  
             )}
             
-            <a href='#' className='col-start-2 col-end-2 row-start-1 row-end-1 flex items-start justify-start text-grayDark text-sm leading-[15px] h-10 '>Regras de Uso</a>
+            <a href='#' className='col-start-2 col-end-2 row-start-1 row-end-1 flex items-start justify-start text-grayDark text-sm leading-[15px] h-10 '>
+              Regras de Uso
+            </a>
             <a href='#' className='col-start-2 col-end-2 row-start-2 row-end-2 flex items-start justify-start text-grayDark text-sm leading-[15px] h-10 '>Ajuda & Contato</a>
             <a href='#' className='col-start-3 col-end-3 row-start-1 row-end-1 flex items-start justify-start text-grayDark text-sm leading-[15px] h-10 '>Sobre Nós</a>
             <a href='#' className='col-start-3 col-end-3 row-start-2 row-end-2 flex items-start justify-start text-grayDark text-sm leading-[15px] h-10 '>Termos de Uso</a>

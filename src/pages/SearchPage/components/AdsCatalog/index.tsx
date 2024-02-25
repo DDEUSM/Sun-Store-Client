@@ -7,7 +7,7 @@ type Props = {
 
 export default function({ ads }: Props){
     return(
-        <div className="flex justify-center items-center w-full rounded-md border-y-2 border-gray dark:border-darkGray">
+        <div className="flex justify-center  items-start w-full min-h-[528px] py-2 rounded-md border-y-2 border-gray dark:border-darkGray">
             <div className='grid grid-cols-2 sm:grid-cols-3 lg:grid-cols-4 gap-2 '>                        
                 {ads.all_ads.length > 0? 
                     (ads.all_ads.map((ad, index) => {

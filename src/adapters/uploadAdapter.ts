@@ -3,7 +3,7 @@ import URL_BASE from "./xhr";
 
 async function uploadProfileImage(data: any, userId: any)
 {
-    const response = await axios.post(
+    await axios.post(
         `${URL_BASE}/user/upload-profile-image/${userId}`,
         { profileImage: data.profileImage[0] },
         {
@@ -11,7 +11,7 @@ async function uploadProfileImage(data: any, userId: any)
                 'Content-Type': 'multipart/form-data'
             }
         }
-    );
+    )
 }
 
 export default { uploadProfileImage }
